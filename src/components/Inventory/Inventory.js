@@ -1,9 +1,28 @@
 import React from 'react';
 
 const Inventory = () => {
+    const product={}
+    const handleAddProduct =() =>{
+        fetch('http://localhost:7000/addProduct',{
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify(product)
+        })
+    }
+
     return (
         <div>
-            <h1>Inventory is coming soon....</h1>
+                <form action="">
+                    <p><span>name: </span><input type="text"/></p>
+                    <p><span>price: </span><input type="text"/></p>
+                    <p><span>quantity: </span><input type="text"/></p>
+                    <p><span>product Image </span><input type="file"/></p>
+                <button onClick={handleAddProduct}>Add Product</button>
+                </form>
+
+          
         </div>
     );
 };
