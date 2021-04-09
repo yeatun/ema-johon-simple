@@ -26,7 +26,7 @@ const Review = () => {
         const savedCart =getDatabaseCart();
         const productKeys = Object.keys(savedCart);
 
-        fetch('http://localhost:7000/productsByKeys',{
+        fetch('https://shrouded-fjord-15103.herokuapp.com/productsByKeys',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json',

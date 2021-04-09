@@ -6,7 +6,7 @@ const ProductDetail = () => {
     const {productKey} = useParams();
     const [product,setProduct] = useState({})
     useEffect(() =>{
-        fetch('http://localhost:7000/product/'+ productKey)
+        fetch('https://shrouded-fjord-15103.herokuapp.com/product/'+ productKey)
         .then(res => res.json())
         .then(data => setProduct(data));
     },[productKey])
